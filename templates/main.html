@@ -1,0 +1,12 @@
+<div class="main">
+  Pokedex
+</div>
+
+<div class="box-wrapper">
+  <div class="box" ng-repeat="pokemon in pokemons">
+    <img ng-src="{{ 'http://pokeapi.co' + pokemon.sprites[0].resource_uri }}">
+    <p> {{ pokemon.name }} </p>
+
+    <span ng-repeat='group in getPokemonEffective()'>{{group.name}}</span>
+  </div>
+</div>
